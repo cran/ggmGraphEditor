@@ -1,0 +1,27 @@
+Package: ggmGraphEditor
+Type: Package
+Title: Interactive Graph Layout Editor for Mixed Graphs
+Version: 0.1.0
+Authors@R: c(person(given = "Giovanni M.", family = "Marchetti", email = "giovanni.marchetti@unifi.it", role = c("aut", "cre"), comment = c(ORCID = "https://orcid.org/0000-0003-4413-9349")), person("Kayvan", "Sadeghi", email = "k.sadeghi@ucl.ac.uk", role = "aut", comment = c(ORCID = "https://orcid.org/0000-0001-7314-744X")))
+Depends: R (>= 3.6.0)
+Imports: methods, visNetwork, shiny, igraph
+Suggests: ggm (>= 2.5.5), graph, testthat (>= 3.0.0)
+Description: Provides an interactive interface to plot and layout mixed
+    graphs based on the adjacency matrix defined in Sadeghi and
+    Marchetti (2012) <doi:10.32614/RJ-2012-015>. Uses 'shiny' and
+    'visNetwork' to allow dynamic node repositioning and coordinate
+    extraction.
+License: GPL-2
+Encoding: UTF-8
+URL: https://github.com/StaThin/ggmGraphEditor
+BugReports: https://github.com/StaThin/ggmGraphEditor/issues
+NeedsCompilation: no
+Config/roxygen2/version: 8.1.0
+Config/testthat/edition: 3
+Packaged: 2026-10-08 12:48:35 UTC; gmm
+Author: Giovanni M. Marchetti [aut, cre] (ORCID:
+    <https://orcid.org/0000-0003-4413-9349>),
+  Kayvan Sadeghi [aut] (ORCID: <https://orcid.org/0000-0001-7314-744X>)
+Maintainer: Giovanni M. Marchetti <giovanni.marchetti@unifi.it>
+Repository: CRAN
+Date/Publication: 2026-10-20 14:20:02 UTC
