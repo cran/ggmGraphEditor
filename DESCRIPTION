@@ -1,7 +1,7 @@
 Package: ggmGraphEditor
 Type: Package
 Title: Interactive Graph Layout Editor for Mixed Graphs
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: c(person(given = "Giovanni M.", family = "Marchetti", email = "giovanni.marchetti@unifi.it", role = c("aut", "cre"), comment = c(ORCID = "https://orcid.org/0000-0003-4413-9349")), person("Kayvan", "Sadeghi", email = "k.sadeghi@ucl.ac.uk", role = "aut", comment = c(ORCID = "https://orcid.org/0000-0001-7314-744X")))
 Depends: R (>= 3.6.0)
 Imports: methods, visNetwork, shiny, igraph
@@ -16,12 +16,12 @@ Encoding: UTF-8
 URL: https://github.com/StaThin/ggmGraphEditor
 BugReports: https://github.com/StaThin/ggmGraphEditor/issues
 NeedsCompilation: no
-Config/roxygen2/version: 8.1.0
+Config/roxygen2/version: 8.1.1
 Config/testthat/edition: 3
-Packaged: 2026-10-08 12:48:35 UTC; gmm
+Packaged: 2026-10-30 11:59:41 UTC; gmm
 Author: Giovanni M. Marchetti [aut, cre] (ORCID:
     <https://orcid.org/0000-0003-4413-9349>),
   Kayvan Sadeghi [aut] (ORCID: <https://orcid.org/0000-0001-7314-744X>)
 Maintainer: Giovanni M. Marchetti <giovanni.marchetti@unifi.it>
 Repository: CRAN
-Date/Publication: 2026-10-20 14:20:02 UTC
+Date/Publication: 2026-10-30 15:10:02 UTC

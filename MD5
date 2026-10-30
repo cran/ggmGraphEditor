@@ -1,8 +1,9 @@
-8c98659e31584bd0331f7364c43d7274 *DESCRIPTION
+16fb4927651514dd3c66497bd45d4abb *DESCRIPTION
 295381f90a2d45c19abbcfa2bfe63ac6 *NAMESPACE
-5658aa9bc64773bd05b3e6916c65fe39 *R/all_functions.R
+0bc68c5ca68628d25d89602cdc881494 *NEWS.md
+32afda00b486328a0fb8966d8f184c2f *R/all_functions.R
 95913afd2323ed9b3c7463bfd19f8847 *man/grMAT2.Rd
-65a286d8069a5b57e6b7bb04f24cbd3d *man/graphLayout.Rd
+4b5b30887803ba636cc13d03b828e1b0 *man/graphLayout.Rd
 0c2f5f65d1b3a97d98e3001e4355e287 *tests/testthat.R
 2bd2d6605977016b42ef76320045c7e9 *tests/testthat/test-grMAT2.R
-9d09af85b63bc62a9a56d7dc70f6f2aa *tests/testthat/test-graphLayout.R
+6bc989065993dba8b352ec446a62f347 *tests/testthat/test-graphLayout.R

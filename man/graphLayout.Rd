@@ -8,7 +8,8 @@ graphLayout(
   ggm_matrix,
   dashed = TRUE,
   bidirected_roundness = 0.25,
-  Viewer = if (Sys.getenv("RSTUDIO") == "1") "Rstudio" else "browser"
+  Viewer = if (Sys.getenv("RSTUDIO") == "1") "Rstudio" else "browser",
+  coords = NULL
 )
 }
 \arguments{
@@ -30,6 +31,24 @@ in a native internal window), or \code{"browser"} (to open it
 in the default web browser). If not specified, it
 automatically detects the environment, defaulting to\code{"Rstudio"}
 inside RStudio and \code{"browser"} elsewhere.}
+
+\item{coords}{Optional initial node positions. Either a numeric matrix
+with one row per node (in the order of the adjacency matrix) and two
+columns (\code{x}, \code{y}), a function such as \code{\link[igraph:layout_nicely]{igraph::layout_nicely()}}
+that takes an \code{igraph} graph and returns such a matrix, or one of the
+strings \code{"TB"}, \code{"BT"}, \code{"LR"}, \code{"RL"}. The graph passed to a function
+has the same nodes and adjacencies as the mixed graph (edge types are
+ignored). The strings request a layered layout
+(\code{\link[igraph:layout_with_sugiyama]{igraph::layout_with_sugiyama()}}) computed on the directed edges only,
+in the spirit of the \code{rankdir} option of GraphViz: arrows point from top
+to bottom (\code{"TB"}), bottom to top (\code{"BT"}), left to right (\code{"LR"}) or
+right to left (\code{"RL"}). Undirected and bi-directed edges do not
+contribute to the layering, so these layouts are most useful for graphs
+with many arrows. The positions are enlarged internally to fit
+the display, but the returned coordinates are in the same units as
+\code{coords} (for the strings, one unit between consecutive layers). If
+\code{NULL} (default), \code{visNetwork} chooses the initial positions and the
+returned coordinates are in display (pixel) units.}
 }
 \value{
 A matrix of \code{X} and \code{Y} coordinates for each node,
@@ -42,7 +61,8 @@ Allows dynamic node repositioning, handles multiple edge types,
 and outputs node coordinates.
 }
 \note{
-The author acknowledges the help of Google Gemini AI (2026).
+The author acknowledges the help of Google Gemini AI (2026) and
+Posit Assistant (2026).
 }
 \examples{
 if (interactive()) {
@@ -75,6 +95,18 @@ if (interactive()) {
   G4[1, 2] <- 111
   G4[2, 1] <- 111
   graphLayout(G4)
+
+  # Starting from an igraph layout
+  graphLayout(G, coords = igraph::layout_nicely)
+
+  # Layered layouts (as rankdir in GraphViz), best for graphs with
+  # many arrows
+  dag <- c("a", "A", "C", "a", "B", "C", "a", "C", "D",
+           "a", "C", "E", "a", "D", "F", "a", "E", "F", "a", "B", "E")
+  graphLayout(dag, coords = "TB")
+  graphLayout(dag, coords = "LR")
+  xy <- matrix(c(0, 1, 1, 0, 0, 0, 1, 1), 4, 2)
+  graphLayout(G, coords = xy)
 }
 }
 \author{
